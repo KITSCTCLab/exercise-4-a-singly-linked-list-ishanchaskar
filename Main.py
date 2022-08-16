@@ -1,6 +1,4 @@
 from typing import Optional
-
-
 class Node:
     """
     Provide necessary documentation
@@ -11,7 +9,6 @@ class Node:
         """
         self.data = data
         self.next = next
-
 
 class LinkedList:
     """
@@ -28,14 +25,27 @@ class LinkedList:
         Insert node at end of the list
         :param data: integer data that will be used to create a node
         """
+        def insertatend(self, data):
+            newNode = Node(data)
+            if(self.head):
+                current = self.head
+                while(current.next):
+                    current = current.next
+                    current.next = newNode
+                    else:
+                        self.head = newNode
+                        
+                        
         # Write code here
-
+#         if(self.head):
+#             current = self.head
+#             while(current.next):
+#                 current = current.next
     def status(self):
         """
         It prints all the elements of list.
         """
         # write code here
-
 
 class Solution:
     """
@@ -48,9 +58,7 @@ class Solution:
         :return: returns the sum as a linked list
         """
         # Write code here
-        
-        
-
+       
 # Do not edit the following code      
 # Create an instance for LinkedList
 first_list = LinkedList()
